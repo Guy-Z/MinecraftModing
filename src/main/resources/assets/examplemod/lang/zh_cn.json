@@ -1,0 +1,10 @@
+{
+  "item.examplemod.obsidian_ingot": "黑曜石锭",
+  "item.examplemod.obsidian_apple": "黑曜石苹果",
+  "item.examplemod.obsidian_sword": "黑曜石剑",
+  "block.examplemod.obsidian_block": "黑曜石块",
+  "block.examplemod.change_cube": "变化方块",
+  "block.examplemod.obsidian_frame": "黑曜石框架",
+  "block.examplemod.obsidian_thorn": "黑曜石尖刺",
+  "itemGroup.obsidian_group": "黑曜石工艺"
+}

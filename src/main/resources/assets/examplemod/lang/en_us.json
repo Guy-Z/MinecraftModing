@@ -1,0 +1,10 @@
+{
+  "item.examplemod.obsidian_ingot": "Obsidian Ingot",
+  "item.examplemod.obsidian_apple": "Obsidian Apple",
+  "item.examplemod.obsidian_sword": "Obsidian Sword",
+  "block.examplemod.obsidian_block": "Obsidian Block",
+  "block.examplemod.change_cube": "Change Cube",
+  "block.examplemod.obsidian_frame": "Obsidian Frame",
+  "block.examplemod.obsidian_thorn": "Obsidian Thorn",
+  "itemGroup.obsidian_group": "Obsidian Craft"
+}
