@@ -2,7 +2,6 @@ package com.example.examplemod.item;
 
 import com.example.examplemod.util.ItemRegistry;
 import com.example.examplemod.util.ModGroup;
-import net.minecraft.entity.MoverType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.Item;
@@ -12,8 +11,6 @@ import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.MathHelper;
-import net.minecraft.util.math.Vec3d;
-import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.world.World;
 
 public class ObsidianSword extends SwordItem {
