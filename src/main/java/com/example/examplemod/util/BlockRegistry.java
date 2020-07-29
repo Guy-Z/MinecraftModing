@@ -1,13 +1,12 @@
-package com.example.examplemod.util.impl;
+package com.example.examplemod.util;
 
 import com.example.examplemod.block.*;
-import com.example.examplemod.util.Registry;
 import net.minecraft.block.Block;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
-public class BlockRegistry implements Registry {
+public class BlockRegistry {
 
     public static final DeferredRegister<Block> blocks = new DeferredRegister<>(ForgeRegistries.BLOCKS,"examplemod");
 

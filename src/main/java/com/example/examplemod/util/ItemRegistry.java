@@ -1,17 +1,15 @@
-package com.example.examplemod.util.impl;
+package com.example.examplemod.util;
 
 import com.example.examplemod.item.ObsidianApple;
 import com.example.examplemod.item.ObsidianIngot;
 import com.example.examplemod.item.ObsidianSword;
-import com.example.examplemod.util.ModGroup;
-import com.example.examplemod.util.Registry;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
-public class ItemRegistry implements Registry {
+public class ItemRegistry {
 
     public static final DeferredRegister<Item> items = new DeferredRegister<>(ForgeRegistries.ITEMS,"examplemod");
 

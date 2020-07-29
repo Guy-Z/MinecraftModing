@@ -6,5 +6,7 @@
   "block.examplemod.change_cube": "Change Cube",
   "block.examplemod.obsidian_frame": "Obsidian Frame",
   "block.examplemod.obsidian_thorn": "Obsidian Thorn",
-  "itemGroup.obsidian_group": "Obsidian Craft"
+  "block.examplemod.counter": "Counter",
+  "itemGroup.obsidian_group": "Obsidian Craft",
+  "message.examplemod.counter": "count:%d"
 }

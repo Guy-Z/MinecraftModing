@@ -2,6 +2,7 @@ package com.example.examplemod;
 
 import com.example.examplemod.util.BlockRegistry;
 import com.example.examplemod.util.ItemRegistry;
+import com.example.examplemod.util.TileEntityTypeRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraftforge.event.RegistryEvent;
@@ -14,6 +15,7 @@ import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.registries.DeferredRegister;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -37,9 +39,17 @@ public class ExampleMod {
 //        // Register ourselves for server and other game events we are interested in
 //        MinecraftForge.EVENT_BUS.register(this);
 
-        ItemRegistry.items.register(FMLJavaModLoadingContext.get().getModEventBus());
+//        ItemRegistry.items.register(FMLJavaModLoadingContext.get().getModEventBus());
+//
+//        BlockRegistry.blocks.register(FMLJavaModLoadingContext.get().getModEventBus());
+//
+//        TileEntityTypeRegistry.TILE_ENTITY_TYPE_DEFERRED_REGISTER.register(FMLJavaModLoadingContext.get().getModEventBus());
 
-        BlockRegistry.blocks.register(FMLJavaModLoadingContext.get().getModEventBus());
+        allRegistry(
+                ItemRegistry.items,
+                BlockRegistry.blocks,
+                TileEntityTypeRegistry.TILE_ENTITY_TYPE_DEFERRED_REGISTER
+        );
 
     }
 
@@ -85,5 +95,13 @@ public class ExampleMod {
             // register a new block here
             LOGGER.info("HELLO from Register Block");
         }
+    }
+
+    private void allRegistry(DeferredRegister<?>... registries) {
+
+        for (DeferredRegister<?> registry : registries) {
+            registry.register(FMLJavaModLoadingContext.get().getModEventBus());
+        }
+
     }
 }
