@@ -1,15 +1,17 @@
-package com.example.examplemod.util;
+package com.example.examplemod.util.impl;
 
 import com.example.examplemod.item.ObsidianApple;
 import com.example.examplemod.item.ObsidianIngot;
 import com.example.examplemod.item.ObsidianSword;
+import com.example.examplemod.util.ModGroup;
+import com.example.examplemod.util.Registry;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
-public class ItemRegistry {
+public class ItemRegistry implements Registry {
 
     public static final DeferredRegister<Item> items = new DeferredRegister<>(ForgeRegistries.ITEMS,"examplemod");
 
@@ -34,7 +36,8 @@ public class ItemRegistry {
     public static RegistryObject<Item> obsidianThorn = items.register("obsidian_thorn",
             () -> new BlockItem(BlockRegistry.obsidianThorn.get(),new Item.Properties().group(ModGroup.obsidianGroup)));
 
-
+    public static RegistryObject<Item> counter = items.register("counter",
+            () -> new BlockItem(BlockRegistry.counter.get(),new Item.Properties().group(ModGroup.obsidianGroup)));
 
 
 }

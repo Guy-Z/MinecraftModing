@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "top": "examplemod:block/counter_top",
+    "bottom": "examplemod:block/counter_bottom",
+    "side": "examplemod:block/counter_side"
+  }
+}
