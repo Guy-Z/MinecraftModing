@@ -7,6 +7,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ActionResultType;
+import net.minecraft.util.Direction;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
@@ -37,7 +38,20 @@ public class Counter extends Block {
 
         if(!worldIn.isRemote() && handIn == Hand.MAIN_HAND){
             CounterTileEntity counterTileEntity = (CounterTileEntity) worldIn.getTileEntity(pos);
-            int count = counterTileEntity.increase();
+            int count;
+            Direction face = hit.getFace();
+            if(face == Direction.UP){
+                count = counterTileEntity.increase();
+            }else if(face == Direction.DOWN){
+                count = counterTileEntity.decrease();
+            }else{
+                double tileX = hit.getHitVec().y - hit.getPos().getY();
+                if(tileX > 0.5){
+                    count = counterTileEntity.increase();
+                }else{
+                    count = counterTileEntity.decrease();
+                }
+            }
             player.sendStatusMessage(
                     new TranslationTextComponent("message.examplemod.counter",count),
                     false
@@ -46,4 +60,5 @@ public class Counter extends Block {
 
         return ActionResultType.SUCCESS;
     }
+
 }
