@@ -37,5 +37,8 @@ public class ItemRegistry {
     public static RegistryObject<Item> counter = items.register("counter",
             () -> new BlockItem(BlockRegistry.counter.get(),new Item.Properties().group(ModGroup.obsidianGroup)));
 
+    public static RegistryObject<Item> hello_block = items.register("hello_block",
+            () -> new BlockItem(BlockRegistry.hello.get(),new Item.Properties().group(ModGroup.obsidianGroup)));
+
 
 }

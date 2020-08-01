@@ -7,6 +7,7 @@
   "block.examplemod.obsidian_frame": "黑曜石框架",
   "block.examplemod.obsidian_thorn": "黑曜石尖刺",
   "block.examplemod.counter": "計數器",
+  "block.examplemod.hello_block": "問好方塊",
   "itemGroup.obsidian_group": "黑曜石工藝",
   "message.examplemod.counter": "當前計數:%d"
 }

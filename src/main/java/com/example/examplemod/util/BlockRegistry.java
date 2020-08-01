@@ -1,6 +1,7 @@
 package com.example.examplemod.util;
 
 import com.example.examplemod.block.*;
+import com.example.examplemod.entity.HelloTileEntity;
 import net.minecraft.block.Block;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -19,5 +20,7 @@ public class BlockRegistry {
     public static RegistryObject<Block> obsidianThorn = blocks.register("obsidian_thorn", ObsidianThorn::new);
 
     public static RegistryObject<Block> counter = blocks.register("counter", Counter::new);
+
+    public static RegistryObject<Block> hello = blocks.register("hello_block", HelloBlock::new);
 
 }
