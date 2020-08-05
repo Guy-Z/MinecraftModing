@@ -1,6 +1,7 @@
 package com.example.examplemod.util;
 
 import com.example.examplemod.item.ObsidianApple;
+import com.example.examplemod.item.ObsidianGuiItem;
 import com.example.examplemod.item.ObsidianIngot;
 import com.example.examplemod.item.ObsidianSword;
 import net.minecraft.item.BlockItem;
@@ -19,6 +20,8 @@ public class ItemRegistry {
     public static RegistryObject<Item> obsidianApple = items.register("obsidian_apple", ObsidianApple::new);
 
     public static RegistryObject<Item> obsidianSword = items.register("obsidian_sword", ObsidianSword::new);
+
+    public static RegistryObject<Item> obsidianGuiItem = items.register("obsidian_gui_item", ObsidianGuiItem::new);
 
 
 
